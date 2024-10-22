@@ -31,6 +31,15 @@ class LeadController extends Controller
             'content.required' => 'Il contenuto della mail e obbligatorio',
         ]
         );
-        
+        if($validator->fails()){
+            return response()->json([
+                'success' => false,
+                'errors' => $validator->errors()
+            ]);
+        }    
+
+        $new_lead = new Lead();
+        $new_lead->fill($form_data);
+        $new_lead->save();
     }
 }
