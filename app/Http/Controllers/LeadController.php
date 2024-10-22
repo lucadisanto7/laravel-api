@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use App\Models\Lead;
+use App\Mail\NewContact;
 
 class LeadController extends Controller
 {
