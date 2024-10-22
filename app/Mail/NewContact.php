@@ -31,7 +31,8 @@ class NewContact extends Mailable
     public function envelope()
     {
         return new Envelope(
-            subject: 'New Contact',
+            subject: 'New Contact from Boolfolio',
+            replyTo: 'info@boolfolio.it'
         );
     }
 
